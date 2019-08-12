@@ -264,7 +264,8 @@ function bk_frame_show() {
             if (req.status == 200) {
                 jsonin = JSON.parse(req.responseText);
                 if (jsonin.data == 'good') {
-                    console.log('cheburek');
+                    /*console.log('cheburek');*/
+                    document.getElementById('bk_hash').value = jsonin.hash;
                     document.getElementById('bk_frame').setAttribute('name', partner_id);
                     document.getElementById('bk_frame').setAttribute('src', 'https://' + bkScriptSource + '/anketa/getanketa/partner_id/' + partner_id + '/params/' + jsonin.hash);
                     var divW = '821';
